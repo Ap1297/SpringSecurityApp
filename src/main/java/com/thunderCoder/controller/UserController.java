@@ -20,4 +20,9 @@ public class UserController {
 		return service.register(user);
 	}
 
+	@PostMapping("/login")
+	public String login(Users user) {
+		System.out.println(user.getUsername());
+		return service.verify(user);
+	}
 }
