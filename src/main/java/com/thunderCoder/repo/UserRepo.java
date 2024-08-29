@@ -7,7 +7,6 @@ import org.springframework.stereotype.Repository;
 import com.thunderCoder.model.Users;
 
 @Repository
-@Component
 public interface UserRepo extends JpaRepository<Users, Integer>{
 
 	Users findByUsername(String username);
