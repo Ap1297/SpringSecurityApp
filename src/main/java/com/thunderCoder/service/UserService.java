@@ -32,7 +32,7 @@ public class UserService {
 	public String verify(Users user) {
 		Authentication authenticate= authManager.authenticate(new UsernamePasswordAuthenticationToken(user.getUsername(),user.getPassword()));
 		if(authenticate.isAuthenticated())
-			return jwtService.generateToken();
+			return jwtService.generateToken(user);
 		
 		return "Fail";
 	}
